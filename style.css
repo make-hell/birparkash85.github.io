@@ -7,8 +7,10 @@
     
     
 body {
-    background-color: #decdc6;
-    overflow: hidden;
+    background-color: #ffffff;
+    margin-left: 10%!important;
+    margin-right: 10%!important;
+    /* overflow: hidden; */
 }
 
 table {
@@ -68,10 +70,37 @@ a {
 footer {
     background-color: #151c48;
     height: 40px;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
+}
+
+.model-view {
+    width: 100%;
+    height: auto;
+    background-color: #f00;
+    color: silver;
+}
+
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.w3-card.test {
+    background-color: #dfdad6;
+    text-align: -webkit-center;
+}
+
+.w3-top {
+    position: relative
+}
+
+.cnav {
+    position: fixed;
+    top: 0;
+    padding-right: 20%!important;
 }
