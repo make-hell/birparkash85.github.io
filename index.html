@@ -18,9 +18,11 @@ body, html {
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-image: url("./3d/assembly_center.gif");
   min-height: 100%;
+  background-color: #2d2d31;
+  background-repeat: no-repeat;
 }
 
 .w3-bar .w3-button {
@@ -31,7 +33,7 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top cnav">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
+  <div class="w3-bar w3-white w3-card" style="display: flex;" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide" style="font: 2em sans-serif;">BIR INDUSTRIES</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
