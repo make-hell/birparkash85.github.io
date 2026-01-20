@@ -1,8 +1,21 @@
-body,h1,h2,h3,h4,h5,h6 {
-  font-family: "Raleway", sans-serif;
+:root {
+  --primary: #5f83de;
+  --secondary: #f57c00;
+  --accent: #25d366;
+  --dark: #222;
+  --light: #f5f7fa;
+  --border: #e0e0e0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--primary);
+    font-weight: 600;
 }
 html,body {
   line-height: 1.7;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--dark);
+    background-color: #fff;
 }
 
 /* PAGE WRAP */
@@ -27,7 +40,7 @@ html,body {
 .hero-content {
   position:relative;
   color:white;
-  padding:512px 128px 0px 128px;
+  padding:256px 128px 0px 128px;
 }
 
 /* NAV */
@@ -37,8 +50,10 @@ html,body {
 }
 /* .nav.transparent { background: rgba(255,255,255,.1); } */
 .nav.solid {
-  background:#fff;
+  /* background:#fff; */
   box-shadow:0 2px 8px rgba(0,0,0,.15);
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid var(--border);
 }
 .nav-inner { padding:16px 24px; }
 .nav.shrink .nav-inner { padding:8px 24px; }
@@ -56,10 +71,13 @@ html,body {
 .nav-link {
   padding:8px 12px;
   text-decoration:none;
+  color: var(--dark);
+  font-weight: 500;
 }
 .nav-link.active {
   border-bottom:3px solid #e53935;
   font-weight:bold;
+  color: var(--secondary);
 }
 
 /* DROPDOWN */
@@ -78,7 +96,9 @@ html,body {
   box-shadow:0 8px 16px rgba(0,0,0,.15);
 }
 .dropdown:hover .dropdown-content { display:block; }
-
+section:nth-child(even) {
+  background-color: var(--light);
+}
 .sub-dropdown { position:relative; }
 .sub-dropdown-content {
   display:none;
@@ -112,6 +132,29 @@ model-viewer {
   background:#f4f4f4;
 }
 .product-details { min-height:260px; }
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #162e6e;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #e56f00;
+}
+
 
 /* GALLERY */
 .gallery {
@@ -149,4 +192,29 @@ model-viewer {
 footer {
   background:black;
   color:white;
+}
+
+.highlight {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.w3-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+    will-change: transform;
+}
+
+.w3-card:hover {
+    transform: translateY(-10px) scale(1.04);
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.25),
+    0 8px 16px rgba(0, 0, 0, 0.12);
+  z-index: 5;
 }
